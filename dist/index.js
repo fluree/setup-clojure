@@ -336,7 +336,7 @@ function restore(identifier, version) {
 }
 exports.restore = restore;
 function getCacheKey(identifier, version) {
-    return `setupclojure-${os_1.default.platform()}-${version_1.VERSION}-${identifier}-${version}`;
+    return `setupclojure-${os_1.default.platform()}-${os_1.default.arch()}-${version_1.VERSION}-${identifier}-${version}`;
 }
 function getCachePaths(identifier) {
     return [path.join(cacheDir, identifier)];
